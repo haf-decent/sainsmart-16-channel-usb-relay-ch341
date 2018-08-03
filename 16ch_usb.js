@@ -36,18 +36,18 @@ function flipRelay(relay, cmd, cb) {
     var buffer = Buffer.from(arr);
     //console.log(buffer);
     port.write(buffer, (err, result) => {
-        if (err) cb(false, err);
-        else cb(true);
+        if (err) console.log(err);
+        else console.log("Relay " + relay + " turned " + cmd);
     });
 }
 
-function resetRelay() {
+function resetRelay(cb) {
     var arr = reset.split(',');
     var buffer = Buffer.from(arr);
     //console.log(buffer);
     port.write(buffer, (err, result) => {
-        if (err) cb(false, err);
-        else cb(true);
+        if (err) console.log(err);
+        else console.log("Relays reset");
     });
 }
 
@@ -56,4 +56,4 @@ var cmds = process.argv;
 if (!cmds[2]) console.log("No arguments given! Aborting...");
 
 else if (cmds[2] == "reset") resetRelay();
-else flipRelay(cmds[2], cmds[3], (result) => {console.log(result)});
+else flipRelay(cmds[2], cmds[3]);
