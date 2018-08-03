@@ -13,7 +13,7 @@ If you wanna skip all the nonsense, just do the following:
 6. Check to make sure ch341 (and usbserial) process is running - `lsmod`
 7. Check to make sure the Relay Board has been recognized through USB - `ls /dev/tty*` (Look for 'ttyUSB0')
 8. Add this repo - `npm install sainsmart-16-channel-usb-relay-ch341` (I'll get around to adding dependencies (just serialport) and all that)
-9.`node 16ch_usb.js <relay # (1-16)> <state (on, off)>` to flip individual relays or `node 16ch_usb.js reset` to turn them all off
+9. `node 16ch_usb.js <relay # (1-16)> <state (on, off)>` to flip individual relays or `node 16ch_usb.js reset` to turn them all off
 
 ## Why this Board
 I had used the [GPIO-controlled 16-channel board from Sainsmart](https://www.sainsmart.com/products/16-channel-12v-relay-module?nosto=continue-shoppping) in a few projects before. It's pretty well-made and reliable, but wiring it is such a pain and you can only really control about 26 relays or so with the GPIO pins of a Raspi Model B. This is normally more than enough, but I needed a bit more capacity to avoid using multiple Pi's.
