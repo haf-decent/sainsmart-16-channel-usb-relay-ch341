@@ -1,8 +1,9 @@
 const SerialPort = require('serialport');
-SerialPort.list((err, result) => {
-    if (err) console.log(err);
-    console.log(result);
-});
+// List available SerialPorts if you aren't sure where your relay board is connected
+// SerialPort.list((err, result) => {
+//     if (err) console.log(err);
+//     console.log(result);
+// });
 var port = new SerialPort('/dev/ttyUSB0');
 
 const start = '0x3A,0x46,0x45,0x30,0x35,0x30,0x30,0x30,'
