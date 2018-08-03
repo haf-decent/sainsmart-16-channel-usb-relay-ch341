@@ -24,10 +24,11 @@ The "HL-340" part ended up pointing me to a ch340/341 driver and [this repo](htt
 5. Plug the Relay Board into your Pi
 6. Check to make sure ch341 (and usbserial) process is running - `lsmod`
 7. Check to make sure the Relay Board has been recognized through USB - `ls /dev/tty*` (Look for 'ttyUSB0')
-8. Use the serialport library to interact with that port (i.e. `const port = new SerialPort('/dev/ttyUSB0')) and/or use my code above to test your connection through the command line
+8. Use the serialport library to interact with that port (i.e. `const port = new SerialPort('/dev/ttyUSB0')`) and/or use my code above to test your connection through the command line
 
 ### To Test
 `npm install sainsmart-16-channel-usb-relay-ch341`
+then
 `node 16ch_usb.js <relay # (1-16)> <state (on, off)>` to flip individual relays or `node 16ch_usb.js reset` to turn them all off
 
 # Enjoy
