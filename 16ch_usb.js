@@ -29,8 +29,8 @@ const end = ',0x0D,0x0A';
 const reset = '0x3A,0x46,0x45,0x30,0x46,0x30,0x30,0x30,0x30,0x30,0x30,0x31,0x30,0x30,0x32,0x30,0x30,0x30,0x30,0x45,0x31' + end;
 
 function flipRelay(relay, cmd) {
-    if (relay > 16 || relay < 1) cb(false, new Error("Invalid relay: " + relay));
-    if (cmd !== "on" && cmd !== "off") cb(false, new Error("Invalid command: " + cmd));
+    if (relay > 16 || relay < 1) return console.log("Invalid relay: " + relay);
+    if (cmd !== "on" && cmd !== "off") return console.log("Invalid command: " + cmd);
     
     var arr = (start + commands[relay - 1][cmd] + end).split(',');
     var buffer = Buffer.from(arr);
