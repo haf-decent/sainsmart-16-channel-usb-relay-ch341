@@ -1,3 +1,5 @@
+If you'd like a more traditional npm package to use in your nodejs projects, check out [this repo](https://github.com/haf-decent/usbrelay)
+
 # Sainsmart 16 Channel USB Relay Guide
 Hi. I recently purchased a Sainsmart 16-Channel USB Relay Board (the "Relay Board" from here on out). It wasn't until it was delivered and I went to try it out with a Rasperry Pi that I noticed that documentation for this product was rather sparse/nonexistent. After many failed attempts and much frustration, I was finally able to get it to work. Since I couldn't find any direct guides for how to do so, I figured I'd throw one together. So here we go.
 
